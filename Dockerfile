@@ -18,6 +18,7 @@ RUN set -ex \
     && make \
     && make install \
     && cd /pg_cron-main \
+    && sed -i "s/Werror/Wno-error=format-security/g" Makefile \
     && make \
     && make install \
     && apk add --no-cache  postgresql-contrib \
