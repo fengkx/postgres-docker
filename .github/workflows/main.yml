@@ -28,5 +28,5 @@ jobs:
           build-args: |
             pg_version=${{ matrix.pg_version }}
           platforms: linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6
-          push: false
+          push: true
           tags: fengkx/postgres:${{ matrix.pg_version }}-alpine
